@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    if (window.self !== window.top) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      window.addEventListener('message', function(e) {
+        if (e.data && e.data.type === 'poli-theme') {
+          document.documentElement.setAttribute('data-theme', e.data.light ? 'light' : 'dark');
+        }
+      });
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check the safety of tattoos, piercings, and permanent makeup during pregnancy and breastfeeding. Trimester-by-trimester reference for body art procedures.">
+  <title>Pregnancy & Breastfeeding Procedure Safety | Poli International</title>
+  <link rel="stylesheet" href="/tools/pregnancy-piercing-safety/css/style.css">
+</head>
+<body>
+<div class="tool-wrapper">
+
+  <header class="tool-header">
+    <div class="tool-header__badge">🤰 Pregnancy Safety Reference</div>
+    <h1>Pregnancy & Breastfeeding Procedure Safety</h1>
+    <p>Trimester-by-trimester safety reference for tattoos, piercings, and permanent makeup procedures.</p>
+  </header>
+
+  <div class="select-card">
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="procedure">Procedure type</label>
+        <select id="procedure" class="input-field">
+          <option value="">— Select —</option>
+          <option value="tattoo">New tattoo</option>
+          <option value="piercing">Body piercing (non-ear)</option>
+          <option value="earlobe">Earlobe piercing</option>
+          <option value="pmu">Permanent makeup / microblading</option>
+          <option value="removal">Tattoo laser removal</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="stage">Current stage</label>
+        <select id="stage" class="input-field">
+          <option value="">— Select —</option>
+          <option value="trying">Trying to conceive</option>
+          <option value="first">First trimester (weeks 1–12)</option>
+          <option value="second">Second trimester (weeks 13–26)</option>
+          <option value="third">Third trimester (weeks 27–40)</option>
+          <option value="breastfeeding">Breastfeeding / postpartum</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div id="result"></div>
+
+  <div class="disclaimer">
+    <strong>Important:</strong> This tool is an educational reference only. Always consult your midwife, obstetrician,
+    or GP before any body art procedure during pregnancy or breastfeeding. Individual health circumstances may
+    change the risk assessment significantly.
+  </div>
+
+</div>
+<script src="/tools/pregnancy-piercing-safety/js/app.js"></script>
+</body>
+</html>
