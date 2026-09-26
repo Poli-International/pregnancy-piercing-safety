@@ -14,55 +14,182 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Check the safety of tattoos, piercings, and permanent makeup during pregnancy and breastfeeding. Trimester-by-trimester reference for body art procedures.">
-  <title>Pregnancy & Breastfeeding Procedure Safety | Poli International</title>
+  <meta name="description" content="Clinically reasoned starting point for conversations with your doctor or midwife about tattoo, piercing, and PMU procedures during pregnancy and breastfeeding.">
+  <meta property="og:title" content="Pregnancy & Breastfeeding Procedure Safety Reference | Poli International">
+  <meta property="og:description" content="Clinically reasoned starting point for conversations with your doctor or midwife about tattoo, piercing, and PMU procedures during pregnancy and breastfeeding.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title data-i18n="meta.title">Pregnancy & Breastfeeding Procedure Safety Reference | Poli International</title>
   <link rel="stylesheet" href="/tools/pregnancy-piercing-safety/css/style.css">
+<script type='application/ld+json'>
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pregnancy & Breastfeeding Procedure Safety Reference",
+  "url": "https://poliinternational.com/pregnancy-piercing-safety/",
+  "description": "Questions to take to your midwife, obstetrician or GP about tattoos, piercings, PMU and laser removal while trying to conceive, pregnant or breastfeeding, stage by stage. A conversation starter, not a verdict.",
+  "inLanguage": ["en", "fr", "de", "es", "it", "nl", "pt"],
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Poli International",
+    "url": "https://poliinternational.com"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "Poli International",
+    "url": "https://poliinternational.com"
+  },
+  "maintainer": {
+    "@type": "Organization",
+    "name": "Poli International",
+    "url": "https://poliinternational.com"
+  },
+  "dateModified": "2026-09-26",
+  "license": "https://opensource.org/licenses/MIT",
+  "isAccessibleForFree": true
+}
+</script>
+  <link rel="stylesheet" href="/tools/shared/theme.css">
+  <script src="/js/input-guards.js"></script>
+  <link rel="stylesheet" href="/tools/shared/print.css" media="print">
+  <link rel="stylesheet" href="/tools/shared/a11y.css">
 </head>
 <body>
 <div class="tool-wrapper">
 
   <header class="tool-header">
-    <div class="tool-header__badge">🤰 Pregnancy Safety Reference</div>
-    <h1>Pregnancy & Breastfeeding Procedure Safety</h1>
-    <p>Trimester-by-trimester safety reference for tattoos, piercings, and permanent makeup procedures.</p>
+    <div class="top-bar">
+      <div class="tool-header__badge" data-i18n="app.badge">Clinical & Studio Reference</div>
+      <div class="lang-selector-wrap">
+        <label for="language-select" class="lang-label" data-i18n="app.lang_label">Language:</label>
+        <select id="language-select" class="lang-select">
+          <option value="en" data-i18n="lang.en">English</option>
+          <option value="de" data-i18n="lang.de">Deutsch</option>
+          <option value="fr" data-i18n="lang.fr">Français</option>
+          <option value="es" data-i18n="lang.es">Español</option>
+          <option value="it" data-i18n="lang.it">Italiano</option>
+          <option value="nl" data-i18n="lang.nl">Nederlands</option>
+          <option value="pt" data-i18n="lang.pt">Português</option>
+        </select>
+      </div>
+    </div>
+    <h1 data-i18n="app.title">Pregnancy & Breastfeeding Procedure Safety</h1>
+    <p data-i18n="app.subtitle">A clinically reasoned starting point for conversations with your doctor or midwife about tattoos, piercings, and permanent makeup.</p>
   </header>
 
-  <div class="select-card">
+  <!-- Quick Filter & Search Bar for Clinical Topics & Guidelines -->
+  <div class="search-bar-wrap" id="search-bar-wrap">
+    <div class="search-input-box">
+      <span class="search-icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </span>
+      <input type="text" id="topic-search-input" class="search-input" placeholder="Search clinical guidelines, topics, or materials (e.g., piercing, navel, mastitis)..." aria-label="Search clinical guidelines and safety topics" autocomplete="off" />
+      <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear search" title="Clear search" hidden>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="search-filter-pills" id="search-filter-pills">
+      <button type="button" class="search-filter-pill active" data-filter="all" data-i18n="search.filter_all">All Topics</button>
+      <button type="button" class="search-filter-pill" data-filter="procedures" data-i18n="search.filter_procedures">Procedures</button>
+      <button type="button" class="search-filter-pill" data-filter="guidelines" data-i18n="search.filter_guidelines">Specialized Guidelines</button>
+    </div>
+  </div>
+
+  <div class="mode-nav-wrap">
+    <div class="mode-nav-scroll">
+      <button type="button" class="mode-btn active" id="btn-mode-reference" data-mode="reference" data-i18n="nav.mode_reference">Single Procedure Reference</button>
+      <button type="button" class="mode-btn" id="btn-mode-compare" data-mode="compare" data-i18n="nav.mode_compare">Procedure Comparison Matrix</button>
+      <button type="button" class="mode-btn" id="btn-mode-hospital" data-mode="hospital" data-i18n="nav.mode_hospital">Hospital & Birthing Jewellery Policy</button>
+      <button type="button" class="mode-btn" id="btn-mode-navel" data-mode="navel" data-i18n="nav.mode_navel">Navel Tissue-Expansion Guide</button>
+      <button type="button" class="mode-btn" id="btn-mode-nipple" data-mode="nipple" data-i18n="nav.mode_nipple">Nipple Piercings & Lactation</button>
+      <button type="button" class="mode-btn" id="btn-mode-postpartum" data-mode="postpartum" data-i18n="nav.mode_postpartum">Postpartum Resumption Timeline</button>
+      <button type="button" class="mode-btn" id="btn-mode-triage" data-mode="triage" data-i18n="nav.mode_triage">Complication Triage Reference</button>
+    </div>
+  </div>
+
+  <div class="select-card" id="select-card">
     <div class="form-grid">
       <div class="form-field">
-        <label for="procedure">Procedure type</label>
+        <label for="procedure" data-i18n="form.procedure_label">Procedure type</label>
         <select id="procedure" class="input-field">
-          <option value="">— Select —</option>
-          <option value="tattoo">New tattoo</option>
-          <option value="piercing">Body piercing (non-ear)</option>
-          <option value="earlobe">Earlobe piercing</option>
-          <option value="pmu">Permanent makeup / microblading</option>
-          <option value="removal">Tattoo laser removal</option>
+          <option value="" data-i18n="form.procedure_placeholder">- Select procedure -</option>
+          <option value="tattoo" data-i18n="proc.tattoo">New tattoo</option>
+          <option value="piercing" data-i18n="proc.piercing">Body piercing (non-ear)</option>
+          <option value="earlobe" data-i18n="proc.earlobe">Earlobe piercing</option>
+          <option value="pmu" data-i18n="proc.pmu">Permanent makeup / microblading</option>
+          <option value="removal" data-i18n="proc.removal">Tattoo laser removal</option>
         </select>
       </div>
       <div class="form-field">
-        <label for="stage">Current stage</label>
+        <label for="stage" data-i18n="form.stage_label">Current stage</label>
         <select id="stage" class="input-field">
-          <option value="">— Select —</option>
-          <option value="trying">Trying to conceive</option>
-          <option value="first">First trimester (weeks 1–12)</option>
-          <option value="second">Second trimester (weeks 13–26)</option>
-          <option value="third">Third trimester (weeks 27–40)</option>
-          <option value="breastfeeding">Breastfeeding / postpartum</option>
+          <option value="" data-i18n="form.stage_placeholder">- Select stage -</option>
+          <option value="trying" data-i18n="stage.trying">Trying to conceive (pre-conception window)</option>
+          <option value="first" data-i18n="stage.first">First trimester (weeks 1-12)</option>
+          <option value="second" data-i18n="stage.second">Second trimester (weeks 13-26)</option>
+          <option value="third" data-i18n="stage.third">Third trimester (weeks 27-40)</option>
+          <option value="breastfeeding" data-i18n="stage.breastfeeding">Breastfeeding / postpartum</option>
         </select>
       </div>
     </div>
   </div>
 
+  <div id="prompt-card" class="prompt-card">
+    <div class="prompt-icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </div>
+    <h2 data-i18n="prompt.title">Select a procedure and stage</h2>
+    <p data-i18n="prompt.body">Select a body art procedure and your pregnancy or breastfeeding stage above to view tailored clinical talking points and a printable questions checklist.</p>
+  </div>
+
   <div id="result"></div>
 
+  <div class="authority-box">
+    <div class="authority-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 3v5a6 6 0 0 0 12 0V3"/><path d="M7.5 3H3"/><path d="M19.5 3h-4.5"/><path d="M10.5 14v2.5a4.5 4.5 0 0 0 9 0V15"/><circle cx="19.5" cy="15" r="2"/></svg>
+      <span data-i18n="section.authority_title">Your Healthcare Provider's Authority</span>
+    </div>
+    <p class="authority-body" data-i18n="section.authority_body">This tool provides general clinical talking points. Your doctor or midwife knows your individual medical history, gestational progress, and bloodwork, and is the sole clinical decision-maker for your care.</p>
+  </div>
+
+  <div class="sibling-tools">
+    <div class="sibling-tools-title">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span data-i18n="section.sibling_title">Related Clinical Reference Tools</span>
+    </div>
+    <div class="sibling-grid">
+      <a href="https://poliinternational.com/medication-interaction-checker/" class="sibling-card" target="_top">
+        <span class="sibling-name">
+          <span data-i18n="sibling.med_title">Medication Interaction Checker</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </span>
+        <span class="sibling-desc" data-i18n="sibling.med_desc">Check how prescription treatments and common medications interact with body art procedures.</span>
+      </a>
+      <a href="https://poliinternational.com/piercing-migration-rejection-risk/" class="sibling-card" target="_top">
+        <span class="sibling-name">
+          <span data-i18n="sibling.migration_title">Piercing Migration & Rejection Risk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </span>
+        <span class="sibling-desc" data-i18n="sibling.migration_desc">Evaluate physical tension, depth, and anatomical movement factors affecting jewelry stability.</span>
+      </a>
+    </div>
+  </div>
+
   <div class="disclaimer">
-    <strong>Important:</strong> This tool is an educational reference only. Always consult your midwife, obstetrician,
-    or GP before any body art procedure during pregnancy or breastfeeding. Individual health circumstances may
-    change the risk assessment significantly.
+    <strong data-i18n="disclaimer.title">Important Clinical Notice:</strong>
+    <span data-i18n="disclaimer.body">This tool is an educational starting point and never substitutes for personal medical advice, diagnosis, or treatment. Always discuss any planned body art procedure with your midwife, obstetrician, or GP prior to booking.</span>
   </div>
 
 </div>
+<script src="/tools/pregnancy-piercing-safety/js/features.js"></script>
 <script src="/tools/pregnancy-piercing-safety/js/app.js"></script>
 </body>
 </html>
