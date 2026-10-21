@@ -304,7 +304,7 @@ function renderNavelView(container, t, getSvgIcon) {
 
   const svgs = [
     // Trimester 1: Resting vertical geometry
-    `<svg width="100%" height="130" viewBox="0 0 200 130" aria-label="First Trimester Resting Geometry Diagram">
+    `<svg width="100%" height="130" viewBox="0 0 200 130" aria-label="${t('navel.svg1_aria')}">
       <defs>
         <linearGradient id="skinGrad1" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="var(--border)" stop-opacity="0.3"/>
@@ -319,11 +319,11 @@ function renderNavelView(container, t, getSvgIcon) {
       <circle cx="95" cy="35" r="5" fill="var(--primary)"/>
       <circle cx="100" cy="71" r="6" fill="var(--primary)"/>
       <!-- Resting labels -->
-      <text x="100" y="112" text-anchor="middle" font-size="10" fill="var(--text-muted)" font-weight="600">Resting Depth: Normal</text>
+      <text x="100" y="112" text-anchor="middle" font-size="10" fill="var(--text-muted)" font-weight="600">${t('navel.svg1_label')}</text>
     </svg>`,
 
     // Trimester 2: Lateral stretching & beginning of cup flattening
-    `<svg width="100%" height="130" viewBox="0 0 200 130" aria-label="Second Trimester Lateral Tension Diagram">
+    `<svg width="100%" height="130" viewBox="0 0 200 130" aria-label="${t('navel.svg2_aria')}">
       <defs>
         <linearGradient id="skinGrad2" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="var(--priority-2-border)" stop-opacity="0.3"/>
@@ -340,11 +340,11 @@ function renderNavelView(container, t, getSvgIcon) {
       <!-- Lateral tension arrows -->
       <path d="M 50 42 L 35 42 M 38 39 L 35 42 L 38 45" stroke="var(--priority-2-text)" stroke-width="2" fill="none"/>
       <path d="M 150 42 L 165 42 M 162 39 L 165 42 L 162 45" stroke="var(--priority-2-text)" stroke-width="2" fill="none"/>
-      <text x="100" y="112" text-anchor="middle" font-size="10" fill="var(--priority-2-text)" font-weight="600">Lateral Shearing Begins</text>
+      <text x="100" y="112" text-anchor="middle" font-size="10" fill="var(--priority-2-text)" font-weight="600">${t('navel.svg2_label')}</text>
     </svg>`,
 
     // Trimester 3: Complete eversion & severe outward shearing
-    `<svg width="100%" height="130" viewBox="0 0 200 130" aria-label="Third Trimester Outward Distension Diagram">
+    `<svg width="100%" height="130" viewBox="0 0 200 130" aria-label="${t('navel.svg3_aria')}">
       <defs>
         <linearGradient id="skinGrad3" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stop-color="var(--priority-1-border)" stop-opacity="0.3"/>
@@ -360,7 +360,7 @@ function renderNavelView(container, t, getSvgIcon) {
       <circle cx="113" cy="44" r="6" fill="var(--priority-1-text)"/>
       <!-- Severe tension indicators -->
       <path d="M 100 30 L 100 18 M 97 22 L 100 18 L 103 22" stroke="var(--priority-1-text)" stroke-width="2" fill="none"/>
-      <text x="100" y="112" text-anchor="middle" font-size="10" fill="var(--priority-1-text)" font-weight="600">Thinning Dermis / Extrusion Risk</text>
+      <text x="100" y="112" text-anchor="middle" font-size="10" fill="var(--priority-1-text)" font-weight="600">${t('navel.svg3_label')}</text>
     </svg>`
   ];
 
