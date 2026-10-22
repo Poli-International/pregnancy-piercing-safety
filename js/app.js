@@ -7,6 +7,7 @@
 'use strict';
 
 const I18N_EN = {
+  "a11y.search_clinical_guidelines_and_safety_to": "Search clinical guidelines and safety topics",
   // Search Bar & Filter Strings
   'search.placeholder': 'Search clinical guidelines, topics, or materials (e.g., piercing, navel, mastitis)...',
   'search.clear_btn': 'Clear search',
@@ -459,6 +460,7 @@ const I18N_EN = {
 };
 
 const I18N_FR = {
+  "a11y.search_clinical_guidelines_and_safety_to": "Rechercher des recommandations cliniques et des sujets de sécurité",
   // Search Bar & Filter Strings
   'search.placeholder': 'Rechercher des directives cliniques, thèmes ou matériaux (ex. piercing, nombril, mastite)...',
   'search.clear_btn': 'Effacer la recherche',
@@ -919,6 +921,7 @@ const I18N_FR = {
 };
 
 const I18N_IT = {
+  "a11y.search_clinical_guidelines_and_safety_to": "Cerca linee guida cliniche e temi di sicurezza",
   // Search Bar & Filter Strings
   'search.placeholder': 'Cerca linee guida cliniche, argomenti o materiali (es. piercing, ombelico, mastite)...',
   'search.clear_btn': 'Cancella ricerca',
@@ -1379,6 +1382,7 @@ const I18N_IT = {
 };
 
 const I18N_DE = {
+  "a11y.search_clinical_guidelines_and_safety_to": "Klinische Leitlinien und Sicherheitsthemen suchen",
   // Search Bar & Filter Strings
   'search.placeholder': 'Klinische Richtlinien, Themen oder Materialien suchen (z. B. Piercing, Nabel, Mastitis)...',
   'search.clear_btn': 'Suche löschen',
@@ -1839,6 +1843,7 @@ const I18N_DE = {
 };
 
 const I18N_TH = {
+  "a11y.search_clinical_guidelines_and_safety_to": "ค้นหาแนวทางทางคลินิกและหัวข้อความปลอดภัย",
   'search.placeholder': 'ค้นหาแนวทางทางคลินิก หัวข้อ หรือวัสดุ (เช่น การเจาะ สะดือ เต้านมอักเสบ)...',
   'search.clear_btn': 'ล้างการค้นหา',
   'search.filter_all': 'ทุกหัวข้อ',
@@ -2218,6 +2223,7 @@ const I18N_TH = {
 
 // Dictionaries map - French, Italian and German registered with English
 const I18N_ES = {
+  "a11y.search_clinical_guidelines_and_safety_to": "Buscar guías clínicas y temas de seguridad",
   // Search Bar & Filter Strings
   'search.placeholder': 'Buscar pautas clínicas, temas o materiales (ej. piercing, ombligo, mastitis)...',
   'search.clear_btn': 'Borrar búsqueda',
@@ -2601,6 +2607,7 @@ const I18N_ES = {
 };
 
 const I18N_NL = {
+  "a11y.search_clinical_guidelines_and_safety_to": "Klinische richtlijnen en veiligheidsonderwerpen zoeken",
   // Search Bar & Filter Strings
   'search.placeholder': 'Zoek klinische richtlijnen, onderwerpen of materialen (bijv. piercing, navel, mastitis)...',
   'search.clear_btn': 'Zoekopdracht wissen',
@@ -2984,6 +2991,7 @@ const I18N_NL = {
 };
 
 const I18N_PT = {
+  "a11y.search_clinical_guidelines_and_safety_to": "Pesquisar diretrizes clínicas e temas de segurança",
   // Search Bar & Filter Strings
   'search.placeholder': 'Pesquisar diretrizes clínicas, tópicos ou materiais (ex.: piercing, umbigo, mastite)...',
   'search.clear_btn': 'Limpar pesquisa',
@@ -3495,6 +3503,9 @@ function applyI18n() {
     if (key) {
       el.textContent = t(key);
     }
+  });
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria-label')));
   });
 
   document.title = t('meta.title');
